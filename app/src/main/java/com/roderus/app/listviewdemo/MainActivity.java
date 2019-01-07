@@ -1,7 +1,6 @@
 package com.roderus.app.listviewdemo;
 
 import android.app.Activity;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
@@ -10,12 +9,13 @@ import android.widget.ListView;
 import android.widget.Toast;
 
 import java.util.ArrayList;
-
-import static android.widget.Toast.LENGTH_LONG;
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.List;
 
 public class MainActivity extends Activity {
 
-    private ArrayList<String> namensliste = new ArrayList<>();
+    private List<String> namensliste = new ArrayList<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,8 +42,6 @@ public class MainActivity extends Activity {
 
 
     private void initArrayList() {
-        for (int i=0; i<=250; i++) {
-            namensliste.add("Name"+i);
-        }
+        namensliste = Arrays.asList(NameArrays.wvornamen);
     }
 }
